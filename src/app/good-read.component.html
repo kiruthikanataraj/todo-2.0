@@ -1,0 +1,12 @@
+<h2>Good Read App</h2>
+<input type="search" [(ngModel)]="searchItem" (ngModelChange)="search()" placeholder="search">
+<div *ngFor="let book of getBooks">
+  {{book.name}}
+</div>
+<br>
+<br>
+<div class="sameline" *ngFor="let i of getPages" (click)="changeIndex(i)">
+  {{i}}
+</div>
+
+<router-outlet></router-outlet>
